@@ -1,0 +1,9 @@
+Features
+
+Technologies Used
+
+- Tailwind CSS (styling)
+- React Router (navigation between pages)
+- Styled Components (Main styling)
+- Redux Toolkit Query (data fetching tool)
+- Redux Toolkit (Managing state of the app)
