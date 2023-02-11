@@ -9,6 +9,7 @@ function App() {
       element: <Root />,
       errorElement: <ErrorPage />,
       children: [
+        { index: true, element: <Home /> },
         { path: "/home", element: <Home /> },
         { path: "/movies", element: <Movies /> },
         { path: "/shows", element: <Shows /> },
