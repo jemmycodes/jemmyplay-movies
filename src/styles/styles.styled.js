@@ -23,7 +23,6 @@ export const Navbar = styled.nav`
   position: absolute;
   left: 0;
   padding-inline: 0.5rem;
-
   width: 100%;
   color: white;
   z-index: 10;
