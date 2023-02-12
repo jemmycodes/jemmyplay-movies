@@ -6,4 +6,31 @@
   .active-link {
     @apply border-b-2 border-orange-500;
   }
+
+  #root {
+    @apply bg-[rgb(14,14,16)] mx-auto min-h-screen min-w-full;
+  }
+
+  .call-to-action {
+    @apply px-[.7em] py-[.3em]   rounded-3xl font-medium;
+  }
+
+  .call-to-action.watch-now {
+    @apply bg-[rgb(255,0,0)];
+  }
+
+  .call-to-action.watch-trailer {
+    @apply border border-white;
+  }
+}
+
+.call-to-action.watch-trailer:hover {
+  color: rgb(255, 0, 0);
+  background: white;
+  transition: 0.2s all ease-in;
+}
+
+.call-to-action.watch-now:hover {
+  box-shadow: 0 0 20px rgb(255, 0, 0);
+  transition: 0.2s all ease-in;
 }

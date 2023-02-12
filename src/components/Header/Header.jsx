@@ -1,39 +1,40 @@
+import { Link } from "react-router-dom";
 import {
   HeaderWrapper,
-  HeaderItems,
-  HeroText,
+  HeaderContent,
+  HeaderText,
   Heading,
-  Button,
-  RedButton,
+  CTA,
 } from "../../styles/styles.styled";
+import { imageURL } from "../url/URL";
 
-function Header(props) {
+function Header() {
   return (
     <HeaderWrapper>
-      <div className="w-full top-0 left-0 h-[65vh] md:h-[85vh] absolute  bg-[rgb(0,0,0,0.5)] -z-10"></div>
-      <HeaderItems>
-        <HeroText>
+      <HeaderContent>
+        <HeaderText>
           <Heading>My Hero Academia: World Heroes' Mission</Heading>
           <p className="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-            laboriosam facere odit fuga cum eos, tempora reiciendis vel, enim
-            voluptate aperiam tempore modi? Sed similique adipisci reiciendis.
-            Fugiat aut voluptate ipsum voluptates iure cum quaerat incidunt,
-            maxime cupiditate ad similique saepe adipisci, nobis iusto sint
-            tempore officiis voluptas! Commodi, amet!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            velit quia voluptatum consequatur doloribus eum asperiores atque
+            assumenda facere. Fugit neque suscipit eligendi, vitae est ullam
+            itaque sed ipsa facere placeat commodi explicabo natus quod
+            perferendis alias ad quis tempore quibusdam quidem sunt
+            necessitatibus quasi. Earum quos dolores facere dolor.
           </p>
-          <hgroup className="flex gap-3 items-center">
-            <Button href="#">Watch Later</Button>
-            <RedButton href="#">Watch Trailer</RedButton>
-          </hgroup>
-        </HeroText>
-        <figure className="hidden lg:block">
+          <CTA>
+            <Link className="call-to-action watch-now">Watch Now</Link>
+            <Link className="call-to-action watch-trailer">Watch Trailer</Link>
+          </CTA>
+        </HeaderText>
+        <figure className="hidden md:block">
           <img
-            src={props.poster}
-            className="w-80 h-[27rem] hidden md:block rounded-lg  "
+            src={`${imageURL}/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg`}
+            alt=""
+            className="max-w-xs max-h-[22rem] rounded-2xl"
           />
         </figure>
-      </HeaderItems>
+      </HeaderContent>
     </HeaderWrapper>
   );
 }

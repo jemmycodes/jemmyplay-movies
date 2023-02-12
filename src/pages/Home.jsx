@@ -1,10 +1,11 @@
-import { Header } from "../components/index";
-import { imageURL } from "../components/url/URL";
+import { Header } from "../components";
+import { ScrollSections } from "../layouts";
 
 function Home() {
   return (
     <>
-      <Header poster={`${imageURL}/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg`} />
+      <Header></Header>
+      <ScrollSections />
     </>
   );
 }

@@ -2,15 +2,8 @@ import styled, { createGlobalStyle } from "styled-components";
 // Global styles
 export const GlobalStyles = createGlobalStyle`
 main {
-    max-width: 1220px;
-    margin: 0 auto; 
-    padding: 1rem 2rem; 
-    position: relative;
-    min-height: 100vh;
- @media (max-width: 768px) {
-   padding-inline: 2rem;
-   background-color: rgb(14, 14, 16)
-  }
+    margin: 0 auto;
+   
 }
 `;
 
@@ -20,12 +13,20 @@ export const Navbar = styled.nav`
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  position: absolute;
   left: 0;
-  padding-inline: 0.5rem;
   width: 100%;
   color: white;
+  position: absolute;
+  padding: 0 1rem;
+  max-width: 1220px;
+  left: 50%;
+  margin-left: -5rem;
   z-index: 10;
+  @media (min-width: 768px) {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
 `;
 
 export const UnorderedList = styled.ul`
@@ -43,83 +44,54 @@ export const UnorderedList = styled.ul`
     padding: 0.5rem;
     background-color: black;
     color: white;
+    z-index: 40;
   }
 `;
 
 // hero
 export const HeaderWrapper = styled.header`
-  background-image: url("https://image.tmdb.org/t/p/original/hZkgoQYus5vegHoetLkCJzb17zJ.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 85vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  @media (max-width: 768px) {
-    height: 60vh;
-  }
-  @media (max-width: 400px) {
-    height: 70vh;
-  }
-`;
-
-export const HeaderItems = styled.div`
+  width: 100vw;
+  height: 80vh;
   display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 1220px;
-  gap: 5rem;
-  color: white;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 1rem;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://image.tmdb.org/t/p/original/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (max-width: 350px) {
+    height: 100vh;
+  }
 `;
 
-export const HeroText = styled.article`
+export const HeaderContent = styled.div`
   color: white;
-  max-width: 40rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  display: flex;
+  width: 100%;
+  max-width: 940px;
+  align-items: center;
+  gap: 5rem;
+`;
+
+export const HeaderText = styled.hgroup`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  @media (max-width: 768px) {
-    max-width: 570px;
-    width: 100%;
-    gap: 1rem;
-  }
+  gap: 0.4rem;
+  max-width: 35rem;
+  margin: 0 auto;
 `;
 
 export const Heading = styled.h1`
-  font-size: 3.8rem;
-  line-height: 4rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  @media (max-width: 768px) {
-    font-size: 1.7rem;
-    line-height: inherit;
+  @media (min-width: 768px) {
+    font-size: 3rem;
+    line-height: 3.5rem;
   }
 `;
-
-export const Button = styled.a`
-  padding: 0.3em 1em;
-  background: red;
-  border-radius: 1rem;
-
-  &:hover {
-    box-shadow: 0 0 25px rgba(255, 0, 0);
-    transition: 0.2s all ease-in;
-  }
-`;
-
-export const RedButton = styled(Button)`
-  background: transparent;
-  border: 1px solid white;
-
-  &:hover {
-    background-color: white;
-    color: red;
-    transition: 0.3s all ease-in;
-  }
+export const CTA = styled.div`
+  display: flex;
+  gap: 1rem;
 `;
