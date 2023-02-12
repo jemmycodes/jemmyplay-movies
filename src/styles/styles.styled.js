@@ -2,8 +2,8 @@ import styled, { createGlobalStyle } from "styled-components";
 // Global styles
 export const GlobalStyles = createGlobalStyle`
 main {
-    margin: 0 auto;
-   
+  min-height: 100vh;
+  width: 100%;
 }
 `;
 
@@ -16,43 +16,47 @@ export const Navbar = styled.nav`
   left: 0;
   width: 100%;
   color: white;
-  position: absolute;
-  padding: 0 1rem;
-  max-width: 1220px;
-  left: 50%;
-  margin-left: -5rem;
-  z-index: 10;
+  position: fixed;
   @media (min-width: 768px) {
+    max-width: 1220px;
     left: 50%;
     transform: translateX(-50%);
-    margin-left: 0;
+  }
+`;
+
+export const Logo = styled.figure`
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    // background: red;
+    // min-width: 100vw;
   }
 `;
 
 export const UnorderedList = styled.ul`
-  display: flex;
-  gap: 2rem;
-  font-weight: 700;
-  @media (max-width: 768px) {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 100%;
-    padding: 0.5rem;
-    background-color: black;
-    color: white;
-    z-index: 40;
+display: flex;
+gap: 3rem;
+@media (max-width: 768px){
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  padding: .5rem 1rem;
+  justify-content: space-between;
+  width: 100%;}
   }
 `;
 
 // hero
 export const HeaderWrapper = styled.header`
-  width: 100vw;
-  height: 80vh;
+  width: 100%;
   display: flex;
+  padding: 7rem 1rem 2rem 1rem;
   justify-content: center;
   align-items: flex-end;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -60,17 +64,13 @@ export const HeaderWrapper = styled.header`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  @media (max-width: 350px) {
-    height: 100vh;
-  }
 `;
 
 export const HeaderContent = styled.div`
   color: white;
-  padding: 0 0.5rem 0.5rem 0.5rem;
   display: flex;
   width: 100%;
-  max-width: 940px;
+  max-width: 1220px;
   align-items: center;
   gap: 5rem;
 `;
@@ -78,9 +78,8 @@ export const HeaderContent = styled.div`
 export const HeaderText = styled.hgroup`
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.5rem;
   max-width: 35rem;
-  margin: 0 auto;
 `;
 
 export const Heading = styled.h1`

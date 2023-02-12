@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
-import { Navbar, UnorderedList } from "../styles/styles.styled";
+import { Navbar, UnorderedList, Logo } from "../styles/styles.styled";
 import { BsPlayFill } from "react-icons/bs";
 
 function Navigation() {
   return (
     <Navbar>
-      <figure className="flex items-center font-bold">
+      <Logo>
         <BsPlayFill className="text-green-600 text-6xl" />
         <figcaption className="text-2xl">jPlay</figcaption>
-      </figure>
+      </Logo>
       <UnorderedList>
         <NavLink
           to="home"

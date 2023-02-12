@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 @layer base {
-  .active-link {
-    @apply border-b-2 border-orange-500;
+  #root {
+    @apply bg-[rgb(14,14,16)] min-h-screen w-full;
   }
 
-  #root {
-    @apply bg-[rgb(14,14,16)] mx-auto min-h-screen min-w-full;
+  .active-link {
+    @apply border-b-2 border-b-red h-fit;
   }
 
   .call-to-action {
-    @apply px-[.7em] py-[.3em]   rounded-3xl font-medium;
+    @apply px-6 py-[.3em] text-sm rounded-3xl font-medium;
   }
 
   .call-to-action.watch-now {
-    @apply bg-[rgb(255,0,0)];
+    @apply bg-red;
   }
 
   .call-to-action.watch-trailer {
