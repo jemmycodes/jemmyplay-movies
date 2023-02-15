@@ -4,7 +4,7 @@
 
 @layer base {
   #root {
-    @apply bg-[rgb(14,14,16)] min-h-screen w-full;
+    @apply bg-[rgb(14,14,16)] min-h-screen  w-full;
   }
 
   .active-link {
@@ -12,7 +12,7 @@
   }
 
   .call-to-action {
-    @apply px-6 py-[.3em] text-sm rounded-3xl font-medium;
+    @apply px-5 py-[.3em] text-sm rounded-3xl font-medium;
   }
 
   .call-to-action.watch-now {

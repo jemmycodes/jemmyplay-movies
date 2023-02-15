@@ -1,10 +1,12 @@
-import styled, { createGlobalStyle } from "styled-components";
-// Global styles
-export const GlobalStyles = createGlobalStyle`
-main {
-  min-height: 100vh;
+import styled from "styled-components";
+import Youtube from "../assets/youtube.svg";
+import Footer from "../assets/footer-bg.jpg";
+
+export const AppWrapper = styled.main`
+  max-width: 1220px;
   width: 100%;
-}
+  margin: 0 auto;
+  padding-inline: 1rem;
 `;
 
 // Navbar
@@ -33,8 +35,6 @@ export const Logo = styled.figure`
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    // background: red;
-    // min-width: 100vw;
   }
 `;
 
@@ -94,3 +94,110 @@ export const CTA = styled.div`
   display: flex;
   gap: 1rem;
 `;
+
+export const ScrollSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1220px;
+  margin: 4rem auto;
+  padding-inlne: 1rem;
+  color: #fff;
+`;
+
+export const ScrollHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+`;
+
+export const MoviesScroll = styled.div`
+  display: flex;
+  gap: 0.7rem;
+  width: 100%;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &&::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
+export const MovieCardWrapper = styled.article`
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+font-weight: medium;
+font-size: .8rem;
+ }`;
+
+export const MovieCard = styled.div`
+  background-image: url("https://image.tmdb.org/t/p/original/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 9rem;
+  height: 15rem;
+  border-radius: 1rem;
+
+  &::before {
+    content: url(${Youtube});
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 1rem 1rem 0 0;
+    color: white;
+    height: 0%;
+    width: 100%;
+    opacity: 0;
+    transition: 1s all ease;
+  }
+
+  &:hover::before {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    opacity: 1;
+  }
+`;
+
+export const FooterWrapper = styled.footer`
+  margin: 0 auto;
+  color: white;
+  padding: 5rem 1rem;
+  background: url(${Footer});
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const FooterLogo = styled.div`
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  align-items: center;
+  margin: 0 auto;
+`;
+
+export const FooterTextSection = styled.section`
+  display: flex;
+  gap: 8rem;
+  justify-content: center;
+  @media (max-width: 768px) {
+    max-width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
+`;
+
+export const FooterListWrapper = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-weight: medium;
+`;
+
+export const FooterListItems = styled.li``;
